@@ -48,9 +48,7 @@ class BiliWeb(UploadBase):
                 video_part = bili.upload_file(file, self.lines, self.threads)  # 上传视频
                 video.videos.append(video_part)  # 添加已经上传的视频
             video.title = self.data["format_title"]
-            video.desc = self.desc + '''
-            这个自动录制上传的小程序开源在Github：https://github.com/ForgQi/bilibiliupload
-                交流群：837362626'''
+            video.desc = self.desc
             video.copyright = self.copyright
             if self.copyright == 2:
                 video.source = self.data["url"]  # 添加转载地址说明
